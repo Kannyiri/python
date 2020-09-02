@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask App</title>
+</head>
+<body>
+    <h1>Welcome to Flask</h1> 
+    <hr />
+    <form action="" method="POST">
+    <label for="">word to reverse</label>
+    <input type="text" name="word" id="word" />
+    <input type="submit" value="Submit"/>
+    </form>
+    {% if res %}
+    <p>Your reversed word is:
+    <strong> {{res}} </strong> 
+    </p>
+    {% endif %}
+</body>
+</html>

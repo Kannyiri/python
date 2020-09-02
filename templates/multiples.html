@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game of Multiples</title>
+</head>
+<body>
+    <h1>Game of Multiples</h1>
+    <form action="/reset-game" method="post">
+        <input type="submit" value="Reset Game"/>
+    </form>
+    <hr />
+    {% if start %}
+    <form action="" method="post">
+        <label for="">Your name</label>
+        <input placeholder="your name" type="text" name="name" id="name" required />
+        <input placeholder="enter multiple here" type="number" name="multiple" id="multiple" required />
+        <input type="submit" value="start game" />
+    </form>
+    {% else %}
+
+    <form action="/play" method="post">
+        <label for="">input a number</label>
+        <input type="number" name="number" id="number" />
+        <input type="submit" value="play" />
+
+        <p>Your current score: <strong>{{score}}</strong></p>
+    </form>
+
+    {% endif %}
+</body>
+</html>
